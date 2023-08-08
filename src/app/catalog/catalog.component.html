@@ -1,7 +1,12 @@
 <main class="container mt-3 mb-3">
-  <div class="row">
-    <div class="col-12">
-      <h2>Catálogo de cursos</h2>
+  <h2>Catálogo de cursos</h2>
+  <div class="row mt-4 mb-3">
+    <div class="col-sm-4 border rounded-2 mb-2" *ngFor="let course of courses">
+      <h3>{{course.name}}</h3>
+      <img [src]="course.imageUrl" alt="Imagen del curso" class="img-fluid mt-2 mb-2 " style="height: 150px;">
+      <p><b>Description:</b> {{course.description}}</p>
+      <p><b>Price:</b> {{course.price}}€</p>
+      <p><b>Category:</b> {{course.category}}</p>
     </div>
   </div>
 </main>
