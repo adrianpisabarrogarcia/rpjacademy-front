@@ -19,4 +19,8 @@ export class CatalogComponent implements OnInit {
     });
   }
 
+  enterClick() {
+    alert("enter click");
+  }
+
 }
