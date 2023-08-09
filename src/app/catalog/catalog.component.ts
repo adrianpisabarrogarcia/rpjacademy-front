@@ -9,13 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class CatalogComponent implements OnInit {
 
   courses: any = [];
+  workshops: any = [];
 
   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
     this.courseService.getAllCourses().subscribe(data => {
       this.courses = data;
-      console.log("traza adrian", data);
+    });
+    this.courseService.getAllWorkshops().subscribe(data => {
+      this.workshops = data;
     });
   }
 

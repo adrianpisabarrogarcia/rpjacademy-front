@@ -17,5 +17,9 @@ export class CourseService {
     return this.http.get(this.api_url + '/all');
   }
 
+  getAllWorkshops(): Observable<any> {
+    return this.http.get(this.api_url + '/all');
+  }
+
 
 }
