@@ -1,3 +1,4 @@
+import { WorkshopService } from './../services/workshop.service';
 import { CourseService } from './../services/course.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,19 +12,26 @@ export class CatalogComponent implements OnInit {
   courses: any = [];
   workshops: any = [];
 
-  constructor(private courseService: CourseService) { }
+  constructor(
+    private courseService: CourseService,
+    private workshopService: WorkshopService
+  ) { }
 
   ngOnInit(): void {
-    this.courseService.getAllCourses().subscribe(data => {
+    this.courseService.getAll().subscribe(data => {
       this.courses = data;
     });
-    this.courseService.getAllWorkshops().subscribe(data => {
+
+    this.workshopService.getAll().subscribe(data => {
       this.workshops = data;
     });
   }
 
-  enterClick() {
-    alert("enter click");
+  openWorkshop(id : number) {
+    this.workshopService.get(id).subscribe(data => {
+      console.log(data);
+      alert('Workshop: ' + data.name + '\n' + data.description)
+    });
   }
 
 }

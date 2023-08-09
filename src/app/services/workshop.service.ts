@@ -7,14 +7,18 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 
-export class CourseService {
+export class WorkshopService {
 
-  private apiUrl = environment.apiUrl + '/course';
+  private apiUrl = environment.apiUrl + '/workshop';
 
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
     return this.http.get(this.apiUrl + '/all');
+  }
+
+  get(id : number): Observable<any> {
+    return this.http.get(this.apiUrl + '/' + id);
   }
 
 }
