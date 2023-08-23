@@ -3,7 +3,7 @@
   </h2>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     <div class="col" *ngFor="let course of courses">
-      <div class="m-2 border rounded-1 p-3 shadow-sm course-card">
+      <div class="m-2 border rounded-1 p-3 shadow-sm course-card" routerLink="/course/{{course.id}}">
         <div class="d-flex justify-content-center">
           <img [src]="course.imageUrl" alt="Imagen del curso" class="img-fluid mt-2 mb-2 w-100 course-img">
         </div>
@@ -20,7 +20,7 @@
       class="workshop-background">talleres</span></h2>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     <div class="col" *ngFor="let workshop of workshops">
-      <div class="m-2 border rounded-1 p-3 shadow-sm workshop-card" (click)="openWorkshop(workshop.id)">
+      <div class="m-2 border rounded-1 p-3 shadow-sm workshop-card" routerLink="/course/{{workshop.id}}">
         <div class="d-flex justify-content-center">
           <img [src]="workshop.imageUrl" alt="Imagen del taller" class="img-fluid mt-2 mb-2 w-100 course-img">
         </div>
