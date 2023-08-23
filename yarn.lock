@@ -207,10 +207,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/router@^16.1.0":
-  version "16.1.8"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-16.1.8.tgz#52993460d1d93ccebd83d5cf0cddf43bf5f46372"
-  integrity sha512-p11Mz0qQbl26fcEEQ9LEUZhKrca9kqSwMWgxBRMWZl0AgtbWQadiVdjiQY0rvpohI7qSO8m3s7CFIQLKIOEvYQ==
+"@angular/router@^16.2.2":
+  version "16.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-16.2.2.tgz#380b2e5e4af829a0df0879d23ada2eb97bb29fd8"
+  integrity sha512-r4KMVUVEWqjOZK0ZUsY8jRqscseGvgcigcikvYJwfxPqtCGYY7RoVAFY7HUtmXC0GAv1aIybK5o/MKTLaecD5Q==
   dependencies:
     tslib "^2.3.0"
 
