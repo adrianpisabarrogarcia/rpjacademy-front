@@ -1,16 +1,29 @@
+@font-face
+  font-family: 'Raleway'
+  src: url('/assets/fonts/Raleway-Black.ttf') format('truetype')
+  font-weight: 900
+  font-style: normal
+
 /* You can add global styles to this file, and also import other style files */
 @import "node_modules/bootstrap/scss/bootstrap.scss"
 @import "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
 @import "node_modules/bootstrap/scss/_variables.scss"
+
+
 
 // Path: src/_variables.sass
 $primary: #94C700 !important
 $primary-color: #94C700 !important
 $secondary-color: #e5e5e5 !important
 $color-oscuro: #575756
+$complement-one: #3300C7
+$complement-two: #C73300
 
 main
   color: $color-oscuro
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Raleway', sans-serif
 
 .text-primary
   color: $primary

@@ -1,13 +1,14 @@
 <main class="container mt-3 mb-3">
   <section>
-    <h2 class="mt-4 mb-4"><span class="color-principal">Catálogo</span> de cursos</h2>
+    <h2 class="mt-4 mb-4"><span class="color-principal">Catálogo</span> de <span class="course-background">cursos</span>
+    </h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col" *ngFor="let course of courses">
-        <div class="m-2 border rounded-1 p-3 shadow-sm curso">
+        <div class="m-2 border rounded-1 p-3 shadow-sm course-card">
           <div class="d-flex justify-content-center">
             <img [src]="course.imageUrl" alt="Imagen del curso" class="img-fluid mt-2 mb-2 w-100 course-img">
           </div>
-          <h3 class="color-principal">{{course.name}}</h3>
+          <h3 class="course-title">{{course.name}}</h3>
           <p><b>Description:</b> {{course.description}}</p>
           <p><b>Price:</b> {{course.price}}€</p>
           <p><b>Category:</b> {{course.category}}</p>
@@ -16,14 +17,14 @@
     </div>
   </section>
   <section>
-    <h2 class="mt-4 mb-4"><span class="color-principal">Catálogo</span> de talleres</h2>
+    <h2 class="mt-4 mb-4"><span class="color-principal">Catálogo</span> de <span class="workshop-background">talleres</span></h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col" *ngFor="let workshop of workshops">
-        <div class="m-2 border rounded-1 p-3 shadow-sm curso" (click)="openWorkshop(workshop.id)">
+        <div class="m-2 border rounded-1 p-3 shadow-sm workshop-card" (click)="openWorkshop(workshop.id)">
           <div class="d-flex justify-content-center">
             <img [src]="workshop.imageUrl" alt="Imagen del taller" class="img-fluid mt-2 mb-2 w-100 course-img">
           </div>
-          <h3 class="color-principal">{{workshop.name}}</h3>
+          <h3 class="workshop-title">{{workshop.name}}</h3>
           <p><b>Description:</b> {{workshop.description}}</p>
           <p><b>Price:</b> {{workshop.price}}€</p>
           <p><b>Category:</b> {{workshop.category}}</p>
