@@ -17,4 +17,8 @@ export class CourseService {
     return this.http.get(this.apiUrl + '/all');
   }
 
+  get(id: number): Observable<any> {
+    return this.http.get(this.apiUrl + '/' + id);
+  }
+
 }
