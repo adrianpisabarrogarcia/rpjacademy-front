@@ -35,7 +35,7 @@ export class CatalogComponent implements OnInit {
         });
       },
       error: (error) => {
-        console.error('Error obteniendo los cursos:', error);
+        console.error('Error obtaining courses', error);
       }
     });
 
@@ -53,7 +53,7 @@ export class CatalogComponent implements OnInit {
         });
       },
       error: (error) => {
-        console.error('Error obteniendo los cursos:', error);
+        console.error('Error obtaining workshops', error);
       }
     });
   }

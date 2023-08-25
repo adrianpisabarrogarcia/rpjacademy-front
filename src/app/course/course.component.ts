@@ -33,7 +33,7 @@ export class CourseComponent implements OnInit {
           console.log('curso', this.course);
         },
         error: (error) => {
-          console.error('Error obteniendo el curso:', error);
+          console.error('Error obtaining the course', error);
         }
       });
     });
