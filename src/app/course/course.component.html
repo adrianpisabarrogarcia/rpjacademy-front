@@ -1,18 +1,22 @@
 <section *ngIf="!course">
-  <br><br><br>
+  <br /><br /><br />
   <h2 class="text-center">¡No se ha encontrado el curso o taller!</h2>
   <p id="emoji">😫</p>
-  <br><br><br>
+  <br /><br /><br />
 </section>
 
 <section *ngIf="course">
   <div class="d-flex flex-column justify-content-center align-items-center">
-    <h1 class="text-center">{{course.name}}</h1>
-    <div
-      class="course-badge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <h1 class="text-center">{{ course.name }}</h1>
+    <div class="course-badge">&nbsp;</div>
     <h5 class="course-badge-title text-center p-2">TALLER</h5>
   </div>
   <div id="predetermined-image">
-    <img src="{{course.imageUrl}}" alt="Imagen Predeterminada del curso {{course.name}}" class="img-fluid">
+    <img src="{{ course.image1 }}" alt="Imagen Predeterminada del curso {{ course.name }}" class="img-fluid" />
   </div>
+  <article class="container mt-3 mb-3 course-description">
+    <h2>Descripción</h2>
+    <div class="course-badge mb-2">&nbsp;</div>
+    <div [innerHTML]="this.descriptionHTML"></div>
+  </article>
 </section>
