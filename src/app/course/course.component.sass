@@ -1,4 +1,17 @@
+@font-face
+  font-family: 'Gloria Hallelujah'
+  src: url('/assets/fonts/GloriaHallelujah-Regular.ttf') format('truetype')
+  font-weight: 900
+  font-style: normal
+
 @import '../../styles'
+
+.btn-primary
+  background-color: $primary-color
+  border: 0.3rem solid $secondary-color
+  &:hover
+    border-color: $color-oscuro !important
+    color: $color-oscuro !important
 
 #emoji
   font-size: 10rem
@@ -28,3 +41,25 @@
   color: $course-color
   font-size: 60px
   font-weight: bold
+
+#descripcion
+  font-size: 1.2rem
+  padding-left: 8rem
+  padding-right: 8rem
+  text-align: center
+
+#slogan
+  background-color: $primary-color
+  font-size: 2rem
+  font-family: 'Gloria Hallelujah', sans-serif
+  color: white
+
+
+
+
+$breakpoint-mobile: 768px
+
+@media (max-width: $breakpoint-mobile)
+  #descripcion
+    padding-left: 1rem
+    padding-right: 1rem
