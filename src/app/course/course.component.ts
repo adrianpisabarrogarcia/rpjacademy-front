@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
-import { CourseService } from '../services/course.service';
+import { CoursesService } from '../services/courses.service';
 import { Course } from '../models/course.model';
 import { DateUtilities } from '../utils/date.utilities';
 
@@ -21,7 +21,7 @@ export class CourseComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private sanitizer: DomSanitizer,
-    private courseService: CourseService
+    private courseService: CoursesService
   ) {
     this.descriptionHTML = this.sanitizer.bypassSecurityTrustHtml('');
     this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl('');

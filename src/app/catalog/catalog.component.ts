@@ -1,5 +1,5 @@
-import { WorkshopService } from './../services/workshop.service';
-import { CourseService } from './../services/course.service';
+import { WorkshopsService } from '../services/workshops.service';
+import { CoursesService } from '../services/courses.service';
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../models/course.model';
 import { StringUtilities } from '../utils/string.utilities';
@@ -16,8 +16,8 @@ export class CatalogComponent implements OnInit {
   workshops: Course[] | null = null;
 
   constructor(
-    private courseService: CourseService,
-    private workshopService: WorkshopService
+    private courseService: CoursesService,
+    private workshopService: WorkshopsService
   ) { }
 
   ngOnInit(): void {

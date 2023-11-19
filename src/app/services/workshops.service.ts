@@ -8,14 +8,14 @@ import { Course } from '../models/course.model';
   providedIn: 'root'
 })
 
-export class WorkshopService {
+export class WorkshopsService {
 
-  private apiUrl = environment.apiUrl + '/workshop';
+  private apiUrl = environment.apiUrl + '/workshops';
 
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Course[]> {
-    return this.http.get<Course[]>(`${this.apiUrl}/all`);
+    return this.http.get<Course[]>(`${this.apiUrl}`);
   }
 
   get(id: number): Observable<Course> {
